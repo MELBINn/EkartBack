@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "backend/index.js",
-    "dev": "nodemon backend/index.js"
+    
+     "start": "nodemon index.js",
+    "build": "npm i"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
