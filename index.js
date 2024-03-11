@@ -9,10 +9,10 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js"
 import cartRoutes from "./routes/cartRoute.js";
 import cors from "cors";
-import path from "path";
+// import path from "path";
 
 
-import { fileURLToPath } from 'url';
+// import { fileURLToPath } from 'url';
 
 
 //configure env
@@ -38,13 +38,20 @@ connectDB();
 //rest object
 const app = express();
 
-const corsOptions = {
-  origin: 'https://euphonious-sunflower-bb1030.netlify.app', 
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: 'https://euphonious-sunflower-bb1030.netlify.app', 
+//   credentials: true,
+// };
+app.use(cors({origin:'https://euphonious-sunflower-bb1030.netlify.app',credentials:true}))
 
 app.use(cors(corsOptions));
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://euphonious-sunflower-bb1030.netlify.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 //middelwares
 
 app.use(express.json());
