@@ -42,11 +42,11 @@ const app = express();
 //   origin: 'https://euphonious-sunflower-bb1030.netlify.app', 
 //   credentials: true,
 // };
-app.use(cors({origin:'https://sprightly-hamster-884533.netlify.app',credentials:true}))
+app.use(cors({origin:'https://heartfelt-otter-ec342d.netlify.app',credentials:true}))
 
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://sprightly-hamster-884533.netlify.app');
+  res.header('Access-Control-Allow-Origin', 'https://heartfelt-otter-ec342d.netlify.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
