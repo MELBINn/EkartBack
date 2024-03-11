@@ -42,11 +42,11 @@ const app = express();
 //   origin: 'https://euphonious-sunflower-bb1030.netlify.app', 
 //   credentials: true,
 // };
-app.use(cors({origin:'https://euphonious-sunflower-bb1030.netlify.app',credentials:true}))
+app.use(cors({origin:'https://merry-paprenjak-ed7eff.netlify.app',credentials:true}))
 
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://euphonious-sunflower-bb1030.netlify.app');
+  res.header('Access-Control-Allow-Origin', 'https://merry-paprenjak-ed7eff.netlify.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
