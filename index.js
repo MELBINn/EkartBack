@@ -44,7 +44,6 @@ const app = express();
 // };
 app.use(cors({origin:'https://euphonious-sunflower-bb1030.netlify.app',credentials:true}))
 
-app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://euphonious-sunflower-bb1030.netlify.app');
